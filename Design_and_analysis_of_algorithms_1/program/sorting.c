@@ -32,6 +32,20 @@ void selectionsort(int arr[],int n){
     }
 }
 
+void insertionsort(int arr[],int n){
+    for(int i=1;i<n;i++){
+        int j=i-1;
+        int current_value= arr[i];
+        while(arr[j]>current_value && j>=0){
+            arr[j-1] = arr[j];
+            j--;
+        }
+        arr[j]=current_value;
+    }
+    for(int i=0;i<n;i++){
+        printf("%d ",arr[i]);
+    }
+}
 
 
 int main(){
@@ -43,10 +57,14 @@ int main(){
     for(int i=0;i<n;i++){
         scanf("%d",&arr[i]);
     }
+
     printf("The bubble sorted array is: ");
     bubbleSort(arr, n);
     printf("\n");
     printf("The selection sorted array is: ");
+    selectionsort(arr,n);
+    printf("\n");
+    printf("The insertion sorted array is: ");
     selectionsort(arr,n);
     
 }
