@@ -58,13 +58,13 @@ int main(){
         scanf("%d",&arr[i]);
     }
 
-    printf("The bubble sorted array is: ");
-    bubbleSort(arr, n);
-    printf("\n");
+    // printf("The bubble sorted array is: ");
+    // bubbleSort(arr, n);
+    // printf("\n");
     printf("The selection sorted array is: ");
     selectionsort(arr,n);
-    printf("\n");
-    printf("The insertion sorted array is: ");
-    selectionsort(arr,n);
+    // printf("\n");
+    // printf("The insertion sorted array is: ");
+    // selectionsort(arr,n);
     
 }

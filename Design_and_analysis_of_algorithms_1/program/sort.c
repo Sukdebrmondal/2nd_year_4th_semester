@@ -26,6 +26,7 @@ void countingsort(int arr[],int n){
 
     for(int i=n-1;i>=0;i--){
         brr[count[arr[i]-min]-1]=arr[i];
+        count[arr[i]-min]--;
     }
 
     for(int i=0;i<n;i++){
@@ -45,10 +46,10 @@ int main(){
     printf("Enter the size of the array: ");
     scanf("%d",&n);
 
-    if(n<=0){
-        printf("Invalid size!");
-        return 1;
-    }
+    // if(n<=0){
+    //     printf("Invalid size!");
+    //     return 1;
+    // }
     // int arr[n], output[n];
     int arr[n];
     for(int i=0;i<n;i++){
