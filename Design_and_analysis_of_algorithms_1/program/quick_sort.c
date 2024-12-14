@@ -5,32 +5,44 @@ int patition(int arr[],int low,int high){
     for(int j=low;j<high;j++){
     int temp=0;
         if(arr[j]<pivot){
-            temp=arr[j];
-            arr[j]=arr[i];
-            arr[i]=temp;
+            i++;
+            temp=arr[i];
+            arr[i]=arr[j];
+            arr[j]=temp;
         }
     }
     i++;
     int temp=arr[i];
-    arr[i]=arr[pivot];
+    arr[i]=pivot;
     arr[high]=temp;
     return i;
 
 }
 
 void quick_sort(int arr[],int low, int high){
-    if(low<high){
+    if(low < high){
         int pivot_index = patition(arr,low,high);
+
         quick_sort(arr,low,pivot_index-1);
         quick_sort(arr,pivot_index+1,high);
     }
 }
 
 int main(){
-    int arr[] = {4,2,1,8,9};
-    quick_sort(arr,0,4);
+    // int arr[] = {4,61,8,10,9};
+    int n;
+    printf("Enter the size of array: ");
+    scanf("%d ",&n);
+    int arr[n];
+    printf("Enter the unsorted array: ");
+    for(int i=0;i<n;i++){
+        scanf("%d",&arr[i]);
+    }
 
-    for(int i=0;i<5;i++){
+    quick_sort(arr,0,n-1);
+
+    printf("Enter the sorted array is: ");
+    for(int i=0;i<n;i++){
         printf("%d ",arr[i]);
     }
 }
