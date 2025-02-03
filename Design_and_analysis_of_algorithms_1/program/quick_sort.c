@@ -22,7 +22,6 @@ int patition(int arr[],int low,int high){
 void quick_sort(int arr[],int low, int high){
     if(low < high){
         int pivot_index = patition(arr,low,high);
-
         quick_sort(arr,low,pivot_index-1);
         quick_sort(arr,pivot_index+1,high);
     }
@@ -34,6 +33,7 @@ int main(){
     printf("Enter the size of array: ");
     scanf("%d ",&n);
     int arr[n];
+
     printf("Enter the unsorted array: ");
     for(int i=0;i<n;i++){
         scanf("%d",&arr[i]);
