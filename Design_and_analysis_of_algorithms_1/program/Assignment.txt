@@ -1,0 +1,30 @@
+1/2/2025
+1.a)write a c program to implement quick sort using divide and conquer(taking last element as pivot).✅
+1.b)write a c program to implement quick sort using divide and conquer(taking first element as pivot).✅
+2.a)write a c program to implement merge sort using divide and conquer.✅
+2.b)write a c program to implement merge sort using iterative way.✅
+19/2/2025
+3.a) write a c program to implement Strassen's Matrix Multiplication algorithm for square matrices using divide and conquer.
+3.b) modify and implement Strassen's Matrix Multiplication algorithm so that it works with non-square matrices as well.
+4/3/2025
+4.a) write a c program to implement matrix chain multiplication problem using dynamic programming.
+4.b) MCM problem using top down approach of dynamic programming (memorization).
+8/3/2025
+5) write a c program to implement fractional knapsack problem using greedy method.
+6) write a c program to implement 0-1 knapsack problem using dynamic programming.✅
+12/3/2025
+7) write a c program to implement nqueens problem using backtracking.
+10/3/2025
+8.a) write a c program to implement breadth first search using adjacency matrix representation.
+8.b) write a c program to implement breadth first search using adjacency list representation.
+11/3/2025
+9.a) write a c program of depth first search using adjacency matrix
+9.a) write a c program of depth first search using list representation
+22/3/2025
+10) write a c program to implement krushkal algorithm for a graph.
+11) write a c program to implement prims algorithm for a graph.
+25/3/2025
+12) WAP to implement Dijkstra algorithm to implement single source shortest path problem.
+26/3/2025
+13) WAP to implement bell-man ford algorithm to implement single source shortest path problem.
+14) WAP to implement floyd-warshall algorithm to implement single source shortest path problem.

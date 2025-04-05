@@ -31,7 +31,7 @@ int main(){
     // int arr[] = {4,61,8,10,9};
     int n;
     printf("Enter the size of array: ");
-    scanf("%d ",&n);
+    scanf("%d",&n);
     int arr[n];
 
     printf("Enter the unsorted array: ");
@@ -41,8 +41,16 @@ int main(){
 
     quick_sort(arr,0,n-1);
 
-    printf("Enter the sorted array is: ");
+    printf("The sorted array is: ");
     for(int i=0;i<n;i++){
         printf("%d ",arr[i]);
     }
 }
+
+
+
+
+
+
+
+
