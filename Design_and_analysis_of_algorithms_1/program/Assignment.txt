@@ -10,8 +10,8 @@
 4.a) write a c program to implement matrix chain multiplication problem using dynamic programming.
 4.b) MCM problem using top down approach of dynamic programming (memorization).
 8/3/2025
-5) write a c program to implement fractional knapsack problem using greedy method.
-6) write a c program to implement 0-1 knapsack problem using dynamic programming.✅
+5) write a c program to implement fractional knapsack problem using greedy method.✅
+6) write a c program to implement 0-1 knapsack problem using dynamic programming.
 12/3/2025
 7) write a c program to implement nqueens problem using backtracking.
 10/3/2025
