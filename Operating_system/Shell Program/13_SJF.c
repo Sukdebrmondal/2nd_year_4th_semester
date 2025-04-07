@@ -77,3 +77,20 @@ int main() {
     printf("the average waiting time: %.2f ms\n",av_time);
     printf("the average turn around time: %.2f ms\n",turn_time);
 }
+
+
+
+// output
+
+// enter the no of process: 3
+// enter the burst time for the process 1: 4
+// enter the burst time for the process 2: 2
+// enter the burst time for the process 3: 6
+
+// process 	 burst time 	 waiting time 	 turn around time
+// P2 		      2 		      0 		      2 
+// P1 		      4 		      2 		      6 
+// P3 		      6 		      6 		     12 
+ 
+// the average waiting time: 2.67 ms
+// the average turn around time: 6.67 ms

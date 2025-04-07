@@ -3,17 +3,17 @@
 read -p "Enter the starting number: " p
 read -p "Enter the ending number: " b
 ((b++))
-a=$p
-echo "even numbers are: "
-while [ $a -ne $b ]
-do
-    res=`expr $a % 2`
-    if [ $res -eq 0 ]
-    then
-        echo $a
-    fi
-    ((a++))
-done
+# a=$p
+# echo "even numbers are: "
+# while [ $a -ne $b ]
+# do
+#     res=`expr $a % 2`
+#     if [ $res -eq 0 ]
+#     then
+#         echo $a
+#     fi
+#     ((a++))
+# done
 a=$p
 echo "odd numbers are: "
 while [ $a -ne $b ]
@@ -27,18 +27,13 @@ do
 done
 
 
-output
-Enter the starting number: 1
-Enter the ending number: 10
-even numbers are: 
-2
-4
-6
-8
-10
-odd numbers are: 
-1
-3
-5
-7
-9
+# output -
+# Enter the starting number: 2   
+# Enter the ending number: 14
+# odd numbers are: 
+# 3
+# 5
+# 7
+# 9
+# 11
+# 13

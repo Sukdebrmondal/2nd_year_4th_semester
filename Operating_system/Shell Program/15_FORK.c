@@ -51,3 +51,20 @@ int main()
         exit(0); 
     }
 }
+
+
+// output
+
+// PARENT: I am the parent process!
+// PARENT: Here's my PID: 9277
+// PARENT: The value of my copy of childpid is 9278
+// PARENT: I will now wait for my child to exit.
+// CHILD: I am the child process!
+// CHILD: Here's my PID: 9278
+// CHILD: My parent's PID is: 9277
+// CHILD: The value of my copy of childpid is: 0
+// CHILD: Sleeping for 1 second...
+// CHILD: Enter an exit value (0 to 255): 5
+// CHILD: Goodbye!
+// PARENT: Child's exit code is: 5
+// PARENT: Goodbye!

@@ -17,6 +17,6 @@ read -p "Enter a number: " m
 factorial $m 
 
 
-output
-Enter a number: 5
-factorial of 5 is 120
+# output
+#Enter a number: 6
+# factorial of 6 is 720

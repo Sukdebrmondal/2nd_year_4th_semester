@@ -19,9 +19,10 @@ else
 fi
 
 
-output
-Enter three numbers: 
-1st number: -3
-2nd number: 4
-3rd number: 7
-The largest number 7
+# output ->
+# Enter three numbers: 
+# 1st number: -6
+# 2nd number: 45
+# 3rd number: 23
+# The largest number 45
+

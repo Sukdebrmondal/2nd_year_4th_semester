@@ -10,10 +10,9 @@ res2=`echo "scale=5;((-($b) - sqrt($de)) / ( 2 * $a))" |bc`
 echo 'X1 : ' $res1
 echo 'X2 : ' $res2
 
-
-output:
-enter 1st number : 1
-enter 2nd number : 5
-Enter 3rd number : 6
-X1 :  -2.00000
-X2 :  -3.00000
+# output ->
+# enter 1st number : 1
+# enter 2nd number : -5
+# Enter 3rd number : 6
+# X1 :  3.00000
+# X2 :  2.00000

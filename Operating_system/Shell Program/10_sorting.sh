@@ -28,14 +28,15 @@ do
     ((i++))
 done
 
-echo "the sorted array is " ${arr[*]}
+echo "the Descending order sorted array is " ${arr[*]}
 
-output
-Enter the number of elements:5
-54
-3
-6
-83
-5
-The unsorted array was  54 3 6 83 5
-the sorted array is  83 54 6 5 3
+# output
+# Enter the number of elements:5
+# 3 
+# 45 
+# 6
+# 12
+# 6
+# The unsorted array was  3 45 6 12 6
+# the Descending order sorted array is  45 12 6 6 3
+

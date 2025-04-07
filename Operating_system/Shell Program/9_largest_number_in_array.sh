@@ -29,13 +29,13 @@ echo "maximum number of this array is "$max " and minimum number of this array i
 
 
 
-output
-Enter the number of elements in the array: 5
-Enter the elements of the array:
-32
-3
-2
-56
-7
-32 3 2 56 7
-maximum number of this array is 56  and minimum number of this array is 2
+# output
+#Enter the number of elements in the array: 5
+# Enter the elements of the array:
+# 34 
+# 1
+# 78
+# 5
+# 3
+# 34 1 78 5 3
+# maximum number of this array is 78  and minimum number of this array is 1

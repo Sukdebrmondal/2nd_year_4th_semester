@@ -44,53 +44,14 @@ do
 done
 
 
-output
-1) push 2) pop 3) exit: 1
-enter the number to push in the stack: 34
-34
-1) push 2) pop 3) exit: 1
-enter the number to push in the stack: 456
-34
-456
-1) push 2) pop 3) exit: 1
-enter the number to push in the stack: 45
-34
-456
-45
-1) push 2) pop 3) exit: 1
-enter the number to push in the stack: 765
-34
-456
-45
-765
-1) push 2) pop 3) exit: 1
-enter the number to push in the stack: 32
-34
-456
-45
-765
-32
-1) push 2) pop 3) exit: 1
-enter the number to push in the stack: 3
-34
-456
-45
-765
-32
-3
-1) push 2) pop 3) exit: 2
-34
-456
-45
-765
-32
-1) push 2) pop 3) exit: 2
-34
-456
-45
-765
-1) push 2) pop 3) exit: 2
-34
-456
-45
-1) push 2) pop 3) exit: 3
+# output
+# 1) push 2) pop 3) exit: 1
+# enter the number to push in the stack: 43
+# 43
+# 1) push 2) pop 3) exit: 1
+# enter the number to push in the stack: 34
+# 43
+# 34
+# 1) push 2) pop 3) exit: 2
+# 43
+# 1) push 2) pop 3) exit: 3

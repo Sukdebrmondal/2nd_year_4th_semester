@@ -15,6 +15,6 @@ done
 echo "The Sum of the Digit is : "$sum
 
 
-output
-enter the number: 123
-The Sum of the Digit is : 6
+# output
+# enter the number: 547
+# The Sum of the Digit is : 16

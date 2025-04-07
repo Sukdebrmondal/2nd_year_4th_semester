@@ -28,8 +28,17 @@ else
     echo "This is not a palindrome"
 fi
 
-output
-Enter the text: madam
-Text is:  madam
-Word in this text is : 5
-This is Palindrome
+# output
+
+# case 1
+    # Enter the text: Sukdeb
+    # Text is:  Sukdeb
+    # Word in this text is : 6
+    # This is not a palindrome
+
+# case 2
+    # Enter the text: madam
+    # Text is:  madam
+    # Word in this text is : 5
+    # This is Palindrome
+
