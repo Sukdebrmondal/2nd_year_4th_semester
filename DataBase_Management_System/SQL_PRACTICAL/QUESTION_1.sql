@@ -1,6 +1,8 @@
 CREATE DATABASE IF NOT EXISTS SQL_ASSIGHMENT;
 USE SQL_ASSIGHMENT;
 
+
+
 CREATE TABLE IF NOT EXISTS STUDENTS(
 NAME VARCHAR(50),
 ROLL INT PRIMARY KEY,
@@ -85,14 +87,15 @@ INSERT INTO ADMISSION (ROLL, COURSE, SEMESTER) VALUES
 (333,"OPERATING SYSTEM","SEM 4"),
 (333, 'Machine Learning', 'Sem 5');
 
+show tables;
 
-SELECT * FROM ADMISSION;
+SELECT * FROM offering;
 
 -- 1. All courses taken by a given student.
 SELECT S.NAME,A.ROLL,A.COURSE FROM STUDENTS AS S
 JOIN ADMISSION AS A
 ON S.ROLL = A.ROLL
-WHERE S.NAME="RAJKUMAR DAS";
+WHERE S.NAME="sukdeb mondal";
 
 
 -- 2. Names of the students admitted in a particular course in a given semester.
