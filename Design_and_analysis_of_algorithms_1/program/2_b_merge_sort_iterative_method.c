@@ -59,3 +59,13 @@ int main() {
 
     return 0;
 }
+
+
+// output->
+// Enter the size of array: 5
+// Enter the elements: 6 3 1 8 7
+// The sorted array is: 1 3 6 7 8
+
+// Enter the size of array: 6
+// Enter the elements: 8 3 6 1 4 9
+// The sorted array is: 1 3 4 6 8 9

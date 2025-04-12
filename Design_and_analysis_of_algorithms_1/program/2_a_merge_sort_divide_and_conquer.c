@@ -46,7 +46,6 @@ void divide(int arr[],int si,int ei){      //si->starting index and ei->ending i
 }
 
 int main(){
-    // int arr[]={6,9,5,2,8};
     int n;
     printf("Enter the size of array: ");
     scanf("%d",&n);
@@ -67,7 +66,13 @@ int main(){
 
 
 
+// output->
+// Enter the size of array: 5
+// Enter the elements: 45 23 12 67 1
+// The sorted array is :1 12 23 45 67
 
 
-
+// Enter the size of array: 4
+// Enter the elements: -23 -1 -21 -65
+// The sorted array is :-65 -23 -21 -1
 

@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int partition(int arr[], int low, int high) {
-    int pivot = arr[low];  // ✅ First element as pivot
+    int pivot = arr[low]; 
     int i = low + 1;
 
     for (int j = low + 1; j <= high; j++) {
@@ -13,7 +13,6 @@ int partition(int arr[], int low, int high) {
         }
     }
 
-    // Place pivot in its correct position
     int temp = arr[low];
     arr[low] = arr[i - 1];
     arr[i - 1] = temp;
@@ -49,3 +48,13 @@ int main() {
 
     return 0;
 }
+
+
+// output->
+// Enter the size of array: 4
+// Enter the unsorted array: 5 1 6 3
+// The sorted array is: 1 3 5 6
+
+// Enter the size of array: 6
+// Enter the unsorted array: 65 23 1 8 56 78
+// The sorted array is: 1 8 23 56 65 78

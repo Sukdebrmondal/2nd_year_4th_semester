@@ -1,3 +1,7 @@
+
+//1.a)write a c program to implement quick sort using divide and conquer(taking last element as pivot).
+
+
 #include<stdio.h>
 int patition(int arr[],int low,int high){
     int pivot = arr[high];
@@ -28,7 +32,6 @@ void quick_sort(int arr[],int low, int high){
 }
 
 int main(){
-    // int arr[] = {4,61,8,10,9};
     int n;
     printf("Enter the size of array: ");
     scanf("%d",&n);
@@ -48,9 +51,14 @@ int main(){
 }
 
 
+// output -> 
 
+// case-1
+// Enter the size of array: 4
+// Enter the unsorted array: 8 3 2 9
+// The sorted array is: 2 3 8 9
 
-
-
-
-
+// case-2
+// Enter the size of array: 5
+// Enter the unsorted array: 9 3 12 6 34
+// The sorted array is: 3 6 9 12 34
