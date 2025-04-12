@@ -91,33 +91,35 @@ int main()
 
     return 0;
 }
+/*
+Enter the number of vertices in the graph: 4
+Enter the adjacency matrix (use 'i' for INF):
+4 i 7 i
+8 4 i 2
+i 9 2 i
+5 2 8 i
 
-// Enter the number of vertices in the graph: 4
-// Enter the adjacency matrix (use 'i' for INF):
-// 4 i 7 i
-// 8 4 i 2
-// i 9 2 i
-// 5 2 8 i
+Shortest distance matrix:
+   4  16   7  18
+   7   4  10   2
+  16   9   2  11
+   5   2   8   4
 
-// Shortest distance matrix:
-//    4  16   7  18
-//    7   4  10   2
-//   16   9   2  11
-//    5   2   8   4
+Enter the number of vertices in the graph: 6
+Enter the adjacency matrix (use 'i' for INF):
+1 i 3 i 5 2
+i 5 4 i 3 6
+3 2 6 i 8 i
+i 3 2 8 i 5
+i 4 7 4 i 9
+i 9 7 3 i 2
 
-// Enter the number of vertices in the graph: 6
-// Enter the adjacency matrix (use 'i' for INF):
-// 1 i 3 i 5 2
-// i 5 4 i 3 6
-// 3 2 6 i 8 i
-// i 3 2 8 i 5
-// i 4 7 4 i 9
-// i 9 7 3 i 2
+Shortest distance matrix:
+   1   5   3   5   5   2
+   7   5   4   7   3   6
+   3   2   6   8   5   5
+   5   3   2   8   6   5
+   9   4   6   4   7   9
+   8   6   5   3   9   2
 
-// Shortest distance matrix:
-//    1   5   3   5   5   2
-//    7   5   4   7   3   6
-//    3   2   6   8   5   5
-//    5   3   2   8   6   5
-//    9   4   6   4   7   9
-//    8   6   5   3   9   2
+   */

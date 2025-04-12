@@ -107,34 +107,36 @@ int main()
     return 0;
 }
 
-// Enter the number of graph nodes:
-// 5
-// Enter the adjacency matrix (use 'i' for INF / no edge):
-// i 4 i 2 i
-// 8 i 4 i i
-// 2 i 1 i 8
-// 9 i 3 i 6
-// 1 i i 4 i
-// Enter the source node (0 to 4):
-// 0
-// Vertex  Distance from Source
-// 0       0
-// 1       4
-// 2       5
-// 3       2
-// 4       8
+/*
+Enter the number of graph nodes:
+5
+Enter the adjacency matrix (use 'i' for INF / no edge):
+i 4 i 2 i
+8 i 4 i i
+2 i 1 i 8
+9 i 3 i 6
+1 i i 4 i
+Enter the source node (0 to 4):
+0
+Vertex  Distance from Source
+0       0
+1       4
+2       5
+3       2
+4       8
 
-// Enter the number of graph nodes:
-// 4
-// Enter the adjacency matrix (use 'i' for INF / no edge):
-// 3 8 5 i
-// i 5 2 3
-// 8 6 1 i
-// 5 7 i 8
-// Enter the source node (0 to 3):
-// 0
-// Vertex  Distance from Source
-// 0       0
-// 1       8
-// 2       5
-// 3       11
+Enter the number of graph nodes:
+4
+Enter the adjacency matrix (use 'i' for INF / no edge):
+3 8 5 i
+i 5 2 3
+8 6 1 i
+5 7 i 8
+Enter the source node (0 to 3):
+0
+Vertex  Distance from Source
+0       0
+1       8
+2       5
+3       11
+*/
