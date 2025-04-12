@@ -1,77 +1,123 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <limits.h>
+#include <string.h>
 
-#define INF 99999  // Large value to represent infinity
-#define MAX 9      // Number of vertices in the graph
-
-// Function to print the final shortest distance matrix
-void printSolution(int dist[MAX][MAX]) {
-    printf("The following matrix shows the shortest distances between every pair of vertices:\n");
-    for (int i = 0; i < MAX; i++) {
-        for (int j = 0; j < MAX; j++) {
-            if (dist[i][j] == INF)
-                printf("%7s", "INF");
-            else
-                printf("%7d", dist[i][j]);
-        }
-        printf("\n");
-    }
-}
+#define INF 99999 // A large value to represent infinity
 
 // Floyd-Warshall algorithm
-void floydWarshall(int graph[MAX][MAX]) {
-    int dist[MAX][MAX];
-
-    // Step 1: Initialize the distance matrix with graph values
-    for (int i = 0; i < MAX; i++) {
-        for (int j = 0; j < MAX; j++) {
+void floydWarshall(int **graph, int size)
+{
+    int **dist = (int **)malloc(size * sizeof(int *));
+    for (int i = 0; i < size; i++)
+    {
+        dist[i] = (int *)malloc(size * sizeof(int));
+        for (int j = 0; j < size; j++)
+        {
             dist[i][j] = graph[i][j];
         }
     }
 
-    // Step 2: Consider each vertex as an intermediate vertex
-    for (int k = 0; k < MAX; k++) {
-        for (int i = 0; i < MAX; i++) {
-            for (int j = 0; j < MAX; j++) {
-                if (dist[i][k] != INF && dist[k][j] != INF && dist[i][k] + dist[k][j] < dist[i][j]) {
+    // Main algorithm
+    for (int k = 0; k < size; k++)
+    {
+        for (int i = 0; i < size; i++)
+        {
+            for (int j = 0; j < size; j++)
+            {
+                if (dist[i][k] != INF && dist[k][j] != INF &&
+                    dist[i][k] + dist[k][j] < dist[i][j])
+                {
                     dist[i][j] = dist[i][k] + dist[k][j];
                 }
             }
         }
     }
 
-    // Print the final shortest distance matrix
-    printSolution(dist);
+    // Print the matrix in formatted style (no labels)
+    for (int i = 0; i < size; i++)
+    {
+        for (int j = 0; j < size; j++)
+        {
+            if (dist[i][j] == INF)
+                printf("%4s", "INF");
+            else
+                printf("%4d", dist[i][j]);
+        }
+        printf("\n");
+    }
+
+    // Free memory
+    for (int i = 0; i < size; i++)
+    {
+        free(dist[i]);
+    }
+    free(dist);
 }
 
-// Driver function
-int main() {
-    int graph[MAX][MAX] = {
-        {0, 4, INF, INF, INF, INF, INF, 8, INF},
-        {4, 0, 8, INF, INF, INF, INF, 11, INF},
-        {INF, 8, 0, 7, INF, INF, 4, INF, 2},
-        {INF, INF, 7, 0, 9, 14, INF, INF, INF},
-        {INF, INF, INF, 9, 0, 10, INF, INF, INF},
-        {INF, INF, INF, 14, 10, 0, 2, INF, INF},
-        {INF, INF, 4, INF, INF, 2, 0, 1, 6},
-        {8, 11, INF, INF, INF, INF, 1, 0, 7},
-        {INF, INF, 2, INF, INF, INF, 6, 7, 0}
-    };
+int main()
+{
+    int size;
+    printf("Enter the number of vertices in the graph: ");
+    scanf("%d", &size);
 
-    floydWarshall(graph);
+    int **graph = (int **)malloc(size * sizeof(int *));
+    for (int i = 0; i < size; i++)
+        graph[i] = (int *)malloc(size * sizeof(int));
+
+    printf("Enter the adjacency matrix (use 'i' for INF):\n");
+    char input[10];
+    for (int i = 0; i < size; i++)
+    {
+        for (int j = 0; j < size; j++)
+        {
+            scanf("%s", input);
+            if (input[0] == 'i' || input[0] == 'I')
+                graph[i][j] = INF;
+            else
+                graph[i][j] = atoi(input);
+        }
+    }
+
+    printf("\nShortest distance matrix:\n");
+    floydWarshall(graph, size);
+
+    // Free memory
+    for (int i = 0; i < size; i++)
+    {
+        free(graph[i]);
+    }
+    free(graph);
+
     return 0;
 }
 
+// Enter the number of vertices in the graph: 4
+// Enter the adjacency matrix (use 'i' for INF):
+// 4 i 7 i
+// 8 4 i 2
+// i 9 2 i
+// 5 2 8 i
 
+// Shortest distance matrix:
+//    4  16   7  18
+//    7   4  10   2
+//   16   9   2  11
+//    5   2   8   4
 
+// Enter the number of vertices in the graph: 6
+// Enter the adjacency matrix (use 'i' for INF):
+// 1 i 3 i 5 2
+// i 5 4 i 3 6
+// 3 2 6 i 8 i
+// i 3 2 8 i 5
+// i 4 7 4 i 9
+// i 9 7 3 i 2
 
-// output 
-// The following matrix shows the shortest distances between every pair of vertices:
-//       0      4     12     19     21     11      9      8     14
-//       4      0      8     15     24     14     12     11     10
-//      12      8      0      7     16      6      4      5      2
-//      19     15      7      0      9     13     11     12      9
-//      21     24     16      9      0     10     12     13     18
-//      11     14      6     13     10      0      2      3      8
-//       9     12      4     11     12      2      0      1      6
-//       8     11      5     12     13      3      1      0      7
-//      14     10      2      9     18      8      6      7      0
+// Shortest distance matrix:
+//    1   5   3   5   5   2
+//    7   5   4   7   3   6
+//    3   2   6   8   5   5
+//    5   3   2   8   6   5
+//    9   4   6   4   7   9
+//    8   6   5   3   9   2

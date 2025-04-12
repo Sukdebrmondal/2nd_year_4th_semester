@@ -1,41 +1,52 @@
 // 3.a) write a c program to implement Strassen's Matrix Multiplication algorithm for square matrices using divide and conquer.
 
-#include<stdio.h>
-#include<math.h>
+#include <stdio.h>
+#include <math.h>
 
 // Function to add two matrices
-void add(int size, int arr_a[size][size], int arr_b[size][size], int res[size][size]) {
-    for(int i = 0; i < size; i++) {
-        for(int j = 0; j < size; j++) {
+void add(int size, int arr_a[size][size], int arr_b[size][size], int res[size][size])
+{
+    for (int i = 0; i < size; i++)
+    {
+        for (int j = 0; j < size; j++)
+        {
             res[i][j] = arr_a[i][j] + arr_b[i][j];
         }
     }
 }
 
 // Function to subtract two matrices
-void sub(int size, int arr_a[size][size], int arr_b[size][size], int res[size][size]) {
-    for(int i = 0; i < size; i++) {
-        for(int j = 0; j < size; j++) {
+void sub(int size, int arr_a[size][size], int arr_b[size][size], int res[size][size])
+{
+    for (int i = 0; i < size; i++)
+    {
+        for (int j = 0; j < size; j++)
+        {
             res[i][j] = arr_a[i][j] - arr_b[i][j];
         }
     }
 }
 
 // Strassen's matrix multiplication function
-void strassen(int size, int arr_a[size][size], int arr_b[size][size], int res[size][size]) {
-    if(size == 1) {
+void strassen(int size, int arr_a[size][size], int arr_b[size][size], int res[size][size])
+{
+    if (size == 1)
+    {
         res[0][0] = arr_a[0][0] * arr_b[0][0];
         return;
     }
-    else {
+    else
+    {
         int resize = size / 2;
 
         // Dividing matrices into 4 submatrices
         int a11[resize][resize], a12[resize][resize], a21[resize][resize], a22[resize][resize];
         int b11[resize][resize], b12[resize][resize], b21[resize][resize], b22[resize][resize];
 
-        for(int i = 0; i < resize; i++) {
-            for(int j = 0; j < resize; j++) {
+        for (int i = 0; i < resize; i++)
+        {
+            for (int j = 0; j < resize; j++)
+            {
                 a11[i][j] = arr_a[i][j];
                 b11[i][j] = arr_b[i][j];
                 a12[i][j] = arr_a[i][j + resize];
@@ -91,8 +102,10 @@ void strassen(int size, int arr_a[size][size], int arr_b[size][size], int res[si
         add(resize, temp2, m6, res22);
 
         // Merging results into final matrix
-        for(int i = 0; i < resize; i++) {
-            for(int j = 0; j < resize; j++) {
+        for (int i = 0; i < resize; i++)
+        {
+            for (int j = 0; j < resize; j++)
+            {
                 res[i][j] = res11[i][j];
                 res[i][j + resize] = res12[i][j];
                 res[i + resize][j] = res21[i][j];
@@ -103,9 +116,12 @@ void strassen(int size, int arr_a[size][size], int arr_b[size][size], int res[si
 }
 
 // Function to print a matrix
-void print_arr(int size, int arr[size][size]) {
-    for(int i = 0; i < size; i++) {
-        for(int j = 0; j < size; j++) {
+void print_arr(int size, int arr[size][size])
+{
+    for (int i = 0; i < size; i++)
+    {
+        for (int j = 0; j < size; j++)
+        {
             printf("%d\t", arr[i][j]);
         }
         printf("\n");
@@ -114,15 +130,19 @@ void print_arr(int size, int arr[size][size]) {
 }
 
 // Function to get the next power of 2 greater than or equal to size
-int cov(int size) {
-    for(int i = 0;; i++) {
-        if(pow(2, i) >= size) {
+int cov(int size)
+{
+    for (int i = 0;; i++)
+    {
+        if (pow(2, i) >= size)
+        {
             return pow(2, i);
         }
     }
 }
 
-int main() {
+int main()
+{
     printf("Enter the dimension of the square matrix n:\n");
     int size;
     scanf("%d", &size);
@@ -131,8 +151,10 @@ int main() {
     int arr_b[new_size][new_size];
 
     // Initializing matrices to 0
-    for(int i = 0; i < new_size; i++) {
-        for(int j = 0; j < new_size; j++) {
+    for (int i = 0; i < new_size; i++)
+    {
+        for (int j = 0; j < new_size; j++)
+        {
             arr_a[i][j] = 0;
             arr_b[i][j] = 0;
         }
@@ -140,15 +162,19 @@ int main() {
 
     // Input matrices
     printf("Enter the elements of the first matrix:\n");
-    for(int i = 0; i < size; i++) {
-        for(int j = 0; j < size; j++) {
+    for (int i = 0; i < size; i++)
+    {
+        for (int j = 0; j < size; j++)
+        {
             scanf("%d", &arr_a[i][j]);
         }
     }
 
     printf("Enter the elements of the second matrix:\n");
-    for(int i = 0; i < size; i++) {
-        for(int j = 0; j < size; j++) {
+    for (int i = 0; i < size; i++)
+    {
+        for (int j = 0; j < size; j++)
+        {
             scanf("%d", &arr_b[i][j]);
         }
     }
@@ -177,9 +203,6 @@ int main() {
 // 620     618     616     614
 // 1012    1010    1008    1006
 // 1404    1402    1400    1398
-
-
-
 
 // Enter the dimension of the square matrix n:
 // 2

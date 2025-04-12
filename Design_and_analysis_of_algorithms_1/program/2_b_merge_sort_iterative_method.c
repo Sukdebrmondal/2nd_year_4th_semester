@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-void merge(int arr[], int l, int m, int r) {
+void merge(int arr[], int l, int m, int r)
+{
     int n1 = m - l + 1;
     int n2 = r - m;
 
@@ -13,7 +14,8 @@ void merge(int arr[], int l, int m, int r) {
 
     int i = 0, j = 0, k = l;
 
-    while (i < n1 && j < n2) {
+    while (i < n1 && j < n2)
+    {
         if (left[i] <= right[j])
             arr[k++] = left[i++];
         else
@@ -27,9 +29,12 @@ void merge(int arr[], int l, int m, int r) {
         arr[k++] = right[j++];
 }
 
-void iterative_merge_sort(int arr[], int n) {
-    for (int curr_size = 1; curr_size < n; curr_size *= 2) {
-        for (int left_start = 0; left_start < n - 1; left_start += 2 * curr_size) {
+void iterative_merge_sort(int arr[], int n)
+{
+    for (int curr_size = 1; curr_size < n; curr_size *= 2)
+    {
+        for (int left_start = 0; left_start < n - 1; left_start += 2 * curr_size)
+        {
             int mid = left_start + curr_size - 1;
             int right_end = (left_start + 2 * curr_size - 1 < n - 1) ? (left_start + 2 * curr_size - 1) : (n - 1);
 
@@ -39,27 +44,29 @@ void iterative_merge_sort(int arr[], int n) {
     }
 }
 
-int main() {
+int main()
+{
     int n;
     printf("Enter the size of array: ");
     scanf("%d", &n);
     int arr[n];
 
     printf("Enter the elements: ");
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++)
+    {
         scanf("%d", &arr[i]);
     }
 
     iterative_merge_sort(arr, n);
 
     printf("The sorted array is: ");
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++)
+    {
         printf("%d ", arr[i]);
     }
 
     return 0;
 }
-
 
 // output->
 // Enter the size of array: 5
