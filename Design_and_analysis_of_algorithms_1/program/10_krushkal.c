@@ -102,3 +102,16 @@ int main() {
 
     return 0;
 }
+
+
+// output
+// Edges in the Minimum Spanning Tree:
+// g - h   Weight: 1
+// c - i   Weight: 2
+// f - g   Weight: 2
+// a - b   Weight: 4
+// c - g   Weight: 4
+// c - d   Weight: 7
+// a - h   Weight: 8
+// d - e   Weight: 9
+// Minimum Cost of Spanning Tree: 37

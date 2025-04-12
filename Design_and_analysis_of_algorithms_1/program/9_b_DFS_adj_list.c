@@ -105,3 +105,58 @@ int main() {
 
     return 0;
 }
+
+
+// output 
+// Enter the number of graph nodes:
+// 6
+// Enter the node number:
+// 0
+// Number of edges connected to node 0:
+// 2
+// Enter connected node:
+// 1
+// Enter connected node:
+// 2
+// Enter the node number:
+// 1
+// Number of edges connected to node 1:
+// 2
+// Enter connected node:
+// 3
+// Enter connected node:
+// 4
+// Enter the node number:
+// 2
+// Number of edges connected to node 2:
+// 1
+// Enter connected node:
+// 5
+// Enter the node number:
+// 3
+// Number of edges connected to node 3:
+// 0
+// Enter the node number:
+// 4
+// Number of edges connected to node 4:
+// 0
+// Enter the node number:
+// 5
+// Number of edges connected to node 5:
+// 0
+
+// Graph adjacency list:
+// 0 -> 1 2
+// 1 -> 3 4
+// 2 -> 5
+// 3 ->
+// 4 ->
+// 5 ->
+// Enter the starting node: 0
+// Starting DFS from node 0
+// Visited node: 0
+// Visited node: 1
+// Visited node: 3
+// Visited node: 4
+// Visited node: 2
+// Visited node: 5

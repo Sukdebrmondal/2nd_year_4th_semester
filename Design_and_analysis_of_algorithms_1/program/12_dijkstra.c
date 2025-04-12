@@ -71,3 +71,15 @@ int main() {
 
     return 0;
 }
+
+// output 
+// Vertex   Distance from Source
+// a        0
+// b        4
+// c        12
+// d        19
+// e        21
+// f        11
+// g        9
+// h        8
+// i        14

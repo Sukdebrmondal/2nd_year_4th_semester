@@ -60,3 +60,18 @@ int main() {
     floydWarshall(graph);
     return 0;
 }
+
+
+
+
+// output 
+// The following matrix shows the shortest distances between every pair of vertices:
+//       0      4     12     19     21     11      9      8     14
+//       4      0      8     15     24     14     12     11     10
+//      12      8      0      7     16      6      4      5      2
+//      19     15      7      0      9     13     11     12      9
+//      21     24     16      9      0     10     12     13     18
+//      11     14      6     13     10      0      2      3      8
+//       9     12      4     11     12      2      0      1      6
+//       8     11      5     12     13      3      1      0      7
+//      14     10      2      9     18      8      6      7      0

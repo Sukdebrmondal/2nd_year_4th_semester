@@ -62,7 +62,7 @@ void enqueue(struct queue * q, int val){
 int dequeue(struct queue * q){
     int a = -1;
     if(isEmpty(q)){
-        printf("queue is empty");
+        printf("queue is empty!");
     }
     else{
         q->front++;
@@ -79,7 +79,7 @@ int main(){
     q.arr = (int*) malloc(q.size * sizeof(int));
     
     int node_size;
-    printf("enter the number of graph nodes: \n");
+    printf("Enter the number of graph nodes: \n");
     scanf("%d", &node_size);
 
     // Initializing visited array to track visited nodes
@@ -90,7 +90,7 @@ int main(){
 
     // Input adjacency matrix
     int adj_mat[node_size][node_size];
-    printf("enter the adjacency matrix of the graph:\n");
+    printf("Enter the adjacency matrix of the graph:\n");
     for(int i = 0; i < node_size; i++){
         for(int j = 0; j < node_size; j++){
             scanf("%d", &adj_mat[i][j]);
@@ -98,7 +98,7 @@ int main(){
     }
     
     int start;
-    printf("enter the starting node: \n");
+    printf("Enter the starting node: \n");
     scanf("%d", &start);
     printf("node is %d \n", start);
     visited[start] = 1;
@@ -115,41 +115,41 @@ int main(){
             }
         }
     }
-    printf("breadth first search is completed!!");
+    printf("Finally Breadth first search is completed!!");
     
     return 0;
 }
 
 /*
-enter the number of undirected graph node: 
+Enter the number of graph nodes:
 5
-enter the adjacency matrix of the undirected graph:
-0 1 0 0 1
-1 0 1 1 1
+Enter the adjacency matrix of the graph:
+1 0 0 1 1
+1 0 1 0 1
 0 1 0 1 0
-0 1 1 0 1
-1 1 0 1 0
-enter the starting node: 
+0 1 1 0 0
+1 0 1 0 1
+Enter the starting node:
 0
-node is 0 
-node is 1 
-node is 4 
-node is 2 
+node is 0
 node is 3
-breath first search is completed!!
+node is 4
+node is 1
+node is 2
+Finally Breadth first search is completed!!
 
 
-enter the number of undirected graph nodes: 
+Enter the number of graph nodes:
 7
-enter the adjacency matrix of the undirected graph:
+Enter the adjacency matrix of the graph:
 0 1 1 1 0 0 0
 1 0 1 0 0 0 0
-1 1 0 1 1 0 0 
-1 0 1 0 1 0 0 
+1 1 0 1 1 0 0
+1 0 1 0 1 0 0
 0 0 1 1 0 1 1
 0 0 0 0 1 0 0
-0 0 0 0 1 0 0
-enter the starting node:
+1 0 1 0 1 0 0
+Enter the starting node:
 0
 node is 0
 node is 1
@@ -158,5 +158,5 @@ node is 3
 node is 4
 node is 5
 node is 6
-breath first search is completed!!
+Finally Breadth first search is completed!!
 */

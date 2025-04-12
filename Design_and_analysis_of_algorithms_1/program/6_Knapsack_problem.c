@@ -128,3 +128,19 @@ int main() {
 
     return 0;
 }
+
+
+// output 
+// Enter number of items: 4
+// Enter capacity of the knapsack: 60
+// Enter profit of each item:
+// 280 100 120 120
+// Enter weight of each item:
+// 40 10 20 24
+
+// Items taken in the knapsack:
+// Item 1: 100% [Profit: 100, Weight: 10]
+// Item 2: 100% [Profit: 280, Weight: 40]
+// Item 3: 50.00% [Profit: 120, Weight: 20]
+
+//  The Maximum Profit: 440.00

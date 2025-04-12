@@ -25,7 +25,7 @@ int main(){
 
     // Input adjacency matrix
     int adj_mat[node_size][node_size];
-    printf("enter the adjacency matrix of the graph:\n");
+    printf("Enter the adjacency matrix of the graph:\n");
     for(int i = 0; i < node_size; i++){
         for(int j = 0; j < node_size; j++){
             scanf("%d", &adj_mat[i][j]);
@@ -33,8 +33,29 @@ int main(){
     }
     
     int start;
-    printf("enter the starting node: \n");
+    printf("Enter the starting node: \n");
     scanf("%d", &start);
 
     dfs(start,node_size,adj_mat,visited);
 }
+
+
+// output 
+
+// enter the number of graph nodes:
+// 6
+// Enter the adjacency matrix of the graph:
+// 0 1 1 0 0 0
+// 1 0 0 1 1 0
+// 1 0 0 0 0 0
+// 0 1 0 0 0 1
+// 0 1 0 0 0 1
+// 0 0 0 1 1 0
+// Enter the starting node:
+// 0
+// node is 0
+// node is 1
+// node is 3
+// node is 5
+// node is 4
+// node is 2

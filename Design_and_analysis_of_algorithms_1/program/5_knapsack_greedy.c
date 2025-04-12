@@ -131,3 +131,35 @@ int main(){
 
     printf("total %d items were taken\nand profit is %d", w, p);
 }
+
+
+// output 
+// Enter the number of items:
+// 4
+// Enter profit along with item weight:
+// profit: 280
+// weight: 40
+// profit: 100
+// weight: 10
+// profit: 120
+// weight: 20
+// profit: 120
+// weight: 24
+// Before sorting the items by profit ratio:
+// profit: 280     100     120     120
+// weight: 40      10      20      24
+// ratio:  7       10      6       5
+
+// After sorting the items by profit ratio:
+// profit: 100     280     120     120
+// weight: 10      40      20      24
+// ratio:  10      7       6       5
+
+// Enter knapsack capacity:
+// 60
+// list of taken items:
+// profit: 100     280     60
+// weight: 10      40      10
+
+// total 60 items were taken
+// and profit is 440
