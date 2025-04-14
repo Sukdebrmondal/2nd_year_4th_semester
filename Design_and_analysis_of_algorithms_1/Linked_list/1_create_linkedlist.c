@@ -26,11 +26,18 @@ int main(){
     third->next=NULL;
 
     printf("the linked list are: ");
-    node *temp=first;
-    while (temp)
+    // node *temp=first;
+    // while (temp)
+    // {
+    //     printf("%d ",temp->data);
+    //     temp=temp->next;
+    // }
+    //traverse linked list
+    while (first!=NULL)
     {
-        printf("%d ",temp->data);
-        temp=temp->next;
+        printf("%d ",first->data);
+        first=first->next;
     }
+    
     return 0;
 }
